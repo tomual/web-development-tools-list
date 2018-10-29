@@ -1,0 +1,26 @@
+body {
+    font-size: 13px;
+}
+
+.btn {
+    font-size: inherit;
+}
+
+.container {
+    max-width: 1580px;
+}
+
+.card {
+    margin: 24px 0;
+}
+
+header {
+    height: 200px;
+}
+
+.badge {
+    padding: 0.5em .75em;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
