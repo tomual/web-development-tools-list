@@ -5,6 +5,9 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('home');
+		$json = file_get_contents("data/src.json");
+		$tools = json_decode($json);
+		$tools = $tools->tools;
+		$this->load->view('home', compact('tools'));
 	}
 }
