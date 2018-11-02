@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/main.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/style.css') ?>">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500|Jua" rel="stylesheet">
+
+
 </head>
 
 <body>
