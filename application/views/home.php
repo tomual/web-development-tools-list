@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h1>not some cats</h1>
+				<h1>site name</h1>
 				<div class="subtitle">Website Development Tools</div>
 			</div>
 		</div>
@@ -32,10 +32,10 @@
 			<a href="<?php echo $tool->url ?>">
 				<div class="col-2">
 					<div class="card">
-						<img class="card-img-top" src="http://brutalistwebsites.com/_img/asuk.work.jpg" alt="Card image cap">
+						<img class="card-img-top" src="<?php echo base_url("img/" . url_title($tool->name, '-', TRUE) . ".png") ?>" alt="Card image cap">
 						<div class="card-body">
 							<div class="card-title"><?php echo $tool->name ?></div>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<p class="card-text"><?php echo $tool->desc ?></p>
 							<?php foreach ($tool->tags as $tag) : ?>
 							<a href="<?php echo base_url("tags/$tag") ?>" class="badge badge-js"><?php echo $tag ?></a>
 							<?php endforeach ?>
