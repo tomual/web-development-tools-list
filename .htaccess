@@ -333,6 +333,10 @@ AddDefaultCharset utf-8
     # (5)
     # RewriteOptions <options>
 
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
     # (6)
     RewriteCond %{HTTPS} =on
     RewriteRule ^ - [env=proto:https]

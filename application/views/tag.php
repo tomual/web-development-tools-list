@@ -29,21 +29,21 @@
 </div>
 <div class="container cards">
 	<div class="row">
+        <div class="col-12">
+            <h1><?php echo $tag ?></h1>
+        </div>
 		<?php foreach ($tools as $tool) : ?>
-			<div class="col-2">
-				<a href="<?php echo $tool->url ?>">
-					<div class="card">
-						<img class="card-img-top" src="<?php echo base_url("img/" . url_title($tool->name, '-', TRUE) . ".png") ?>" alt="Card image cap">
-						<div class="card-body">
-							<div class="card-title"><?php echo $tool->name ?></div>
-							<p class="card-text"><?php echo $tool->desc ?></p>
-							<?php foreach ($tool->tags as $tag) : ?>
-							<a href="<?php echo base_url("tag/$tag") ?>" class="badge badge-js"><?php echo $tag ?></a>
-							<?php endforeach ?>
-						</div>
-					</div>
-				</a>
-			</div>
+            <div class="col-2">
+                <a href="<?php echo $tool->url ?>">
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo base_url("img/" . url_title($tool->name, '-', true) . ".png") ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="card-title"><?php echo $tool->name ?></div>
+                            <p class="card-text"><?php echo $tool->desc ?></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
 		<?php endforeach ?>
 	</div>
 </div>
