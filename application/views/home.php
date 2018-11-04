@@ -30,10 +30,10 @@
 <div class="container cards">
 	<div class="row">
 		<?php foreach ($tools as $tool) : ?>
-			<div class="col-2">
+			<div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-6">
 				<a href="<?php echo $tool->url ?>">
 					<div class="card">
-						<img class="card-img-top" src="<?php echo base_url("img/" . url_title($tool->name, '-', TRUE) . ".png") ?>" alt="Card image cap">
+						<div class="card-img-top" style="background-image:url('<?php echo base_url("img/" . url_title($tool->name, '-', TRUE) . ".png") ?>')" alt="Card image cap"></div>
 						<div class="card-body">
 							<div class="card-title"><?php echo $tool->name ?></div>
 							<p class="card-text"><?php echo $tool->desc ?></p>
