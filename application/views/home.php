@@ -3,7 +3,7 @@
 <header>
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col" style="background-image: url('<?php echo base_url('img/logo.png') ?>')">
 				<h1>site name</h1>
 				<div class="subtitle">Website Development Tools</div>
 			</div>
@@ -45,6 +45,11 @@
 				</a>
 			</div>
 		<?php endforeach ?>
+	</div>
+	<div class="row">
+		<div class="col">
+			<?php $this->load->view('pagination') ?>
+		</div>
 	</div>
 </div>
 <footer>

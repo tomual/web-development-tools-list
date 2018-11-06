@@ -19,6 +19,13 @@ header {
     color: #FFF;
 }
 
+header .col {
+    background-repeat: no-repeat;
+    height: 200px;
+    background-position-y: 15px;
+    padding-left: 280px;
+}
+
 header h1 {
     text-shadow: 0px 2px 6px #335873;
     font-family: 'Jua', sans-serif;
@@ -102,7 +109,7 @@ header h1 {
 @media (min-width: 1200px)
 {
     .container {
-        max-width: 1300px;
+        max-width: 1500px;
     }
 }
 

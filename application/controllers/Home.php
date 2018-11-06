@@ -11,6 +11,7 @@ class Home extends CI_Controller {
 			$tools = json_decode($json);
 			$tools = $tools->tools;
 		}
-		$this->load->view('home', compact('tools'));
+		$pagination = paginate($tools);
+		$this->load->view('home', compact('tools', 'pagination'));
 	}
 }
