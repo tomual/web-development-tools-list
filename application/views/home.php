@@ -13,7 +13,7 @@
 <div class="tags">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-9">
+			<div class="col">
 				<a href="<?php echo base_url('tag/css') ?>" class="badge badge-css">CSS</a>
 				<a href="<?php echo base_url('tag/js') ?>" class="badge badge-js">JS</a>
 				<a href="<?php echo base_url('tag/icon') ?>" class="badge badge-icon">Icon</a>

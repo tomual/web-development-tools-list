@@ -1,6 +1,7 @@
 body {
     font-size: 13px;
     font-family: 'Fira Sans', sans-serif;
+    background: #edf3f757;
 }
 
 .btn {
@@ -10,7 +11,7 @@ body {
 .card {
     margin: 24px 0;
     border: 0;
-    box-shadow: 0px 1px 4px #4775963d;
+    box-shadow: 0px 1px 4px #47759624;
 }
 
 header {
@@ -39,9 +40,9 @@ header h1 {
 }
 
 .badge {
-    padding: 12px 24px;
+    padding: 9px;
     font-size: 16px;
-    border-radius: 20px;
+    border-radius: 3px;
     margin-right: 12px;
     margin-bottom: 12px;
     box-shadow: 0px 1px 4px #4775966b;
@@ -97,6 +98,23 @@ header h1 {
     font-size: 12px;
     color: #567992;
     min-height: 36px;
+}
+
+.page-link {
+    border: none;
+    padding: 12px 22px;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #477596;
+    border-color: #477596;
+    border-radius: 3px;
+}
+
+.page-link:hover {
+    border-radius: 3px;
 }
 
 @media (min-width: 1600px)
