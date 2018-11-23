@@ -23,6 +23,7 @@
 				<a href="<?php echo base_url('tag/reference') ?>" class="badge badge-reference">Reference</a>
 				<a href="<?php echo base_url('tag/read') ?>" class="badge badge-read">Read</a>
 				<a href="<?php echo base_url('tag/template') ?>" class="badge badge-template">Template</a>
+				<a class="badge badge-template disabled">&nbsp;</a>
 			</div>
 		</div>
 	</div>
@@ -30,10 +31,10 @@
 <div class="container cards">
 	<div class="row">
 		<?php foreach ($tools as $tool) : ?>
-			<div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-6">
+			<div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-6">
 				<a href="<?php echo $tool->url ?>">
 					<div class="card">
-						<div class="card-img-top" style="background-image:url('<?php echo base_url("img/" . url_title($tool->name, '-', TRUE) . ".png") ?>')" alt="Card image cap"></div>
+						<div class="card-img-top" style="background-image:url('<?php echo base_url("img/" . url_title($tool->name, '-', TRUE) . ".jpg") ?>')" alt="Card image cap"></div>
 						<div class="card-body">
 							<div class="card-title"><?php echo $tool->name ?></div>
 							<p class="card-text"><?php echo $tool->desc ?></p>

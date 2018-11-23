@@ -58,12 +58,30 @@ header h1 {
     text-decoration: none;
 }
 
+.badge.disabled {
+    opacity: 0.5;
+}
+
 .card-img-top {
     background: #CCC;
     height: 120px;
     border-bottom: 1px solid #edf3f7;
     background-size: 200%;
     background-position: top center;
+}
+
+.card-img-top:before {
+    display: block;
+    content: " ";
+    background: #477596;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.card-img-top.hover:before {
+    opacity: 0;
 }
 
 .tags {
@@ -122,6 +140,9 @@ header h1 {
     .container {
         max-width: 1500px;
     }
+    .tags .col {
+        padding: 0 200px;
+    }
 }
 
 @media (min-width: 1200px)
@@ -136,6 +157,13 @@ header h1 {
 {
     header {
         text-align: center;
+        height: 310px;
+    }
+    header .col {
+        height: 310px;
+        padding-left: 0;
+        background-position-y: 130px;
+        background-position-x: center;
     }
     .tags .badge {
         min-width: auto;
@@ -144,5 +172,16 @@ header h1 {
     }
     .tags {
         text-align: center;
+    }
+    header h1 {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 420px)
+{
+    .cards .col-6 {
+        flex: none;
+        max-width: 100%;
     }
 }
