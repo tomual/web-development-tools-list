@@ -20,6 +20,16 @@ header {
     color: #FFF;
 }
 
+header a {
+    display: inherit;
+    color: inherit;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 header .col {
     background-repeat: no-repeat;
     height: 200px;

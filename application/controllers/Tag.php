@@ -8,9 +8,9 @@ class Tag extends CI_Controller {
 		if (file_exists("data/$tag.json")) {
 			$json = file_get_contents("data/$tag.json");
 			$tools = json_decode($json);
-			if (!empty($tools->tools)) {
-				$tools = $tools->tools;
-				$this->load->view('tag', compact('tools', 'tag'));
+			if (!empty($tools)) {
+				$pagination = paginate($tools);
+				$this->load->view('tag', compact('tools', 'tag', 'pagination'));
 				return;
 			}
 		}

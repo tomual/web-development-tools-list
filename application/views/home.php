@@ -3,10 +3,12 @@
 <header>
 	<div class="container">
 		<div class="row">
-			<div class="col" style="background-image: url('<?php echo base_url('img/logo.png') ?>')">
-				<h1>site name</h1>
-				<div class="subtitle">Website Development Tools</div>
-			</div>
+			<a href="<?php echo base_url() ?>">
+					<div class="col" style="background-image: url('<?php echo base_url('img/logo.png') ?>')">
+					<h1>site name</h1>
+					<div class="subtitle">Website Development Tools</div>
+				</div>
+			</a>
 		</div>
 	</div>
 </header>
