@@ -1,17 +1,5 @@
 <?php $this->load->view('header') ?>
 
-<header>
-	<div class="container">
-		<div class="row">
-			<a href="<?php echo base_url() ?>">
-					<div class="col" style="background-image: url('<?php echo base_url('img/logo.png') ?>')">
-					<h1>site name</h1>
-					<div class="subtitle">Website Development Tools</div>
-				</div>
-			</a>
-		</div>
-	</div>
-</header>
 <div class="tags">
 	<div class="container">
 		<div class="row">
@@ -25,7 +13,7 @@
 				<a href="<?php echo base_url('tag/reference') ?>" class="badge badge-reference">Reference</a>
 				<a href="<?php echo base_url('tag/read') ?>" class="badge badge-read">Read</a>
 				<a href="<?php echo base_url('tag/template') ?>" class="badge badge-template">Template</a>
-				<a class="badge badge-template disabled">&nbsp;</a>
+				<a href="<?php echo base_url() ?>" class="badge badge-template all">All</a>
 			</div>
 		</div>
 	</div>
@@ -33,7 +21,7 @@
 <div class="container cards">
 	<div class="row">
 		<div class="col-12">
-			<h1><?php echo $tag ?></h1>
+			<h1 class="tag-title"><?php echo $tag ?></h1>
 		</div>
 		<?php foreach ($tools as $tool) : ?>
 			<div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-6">
@@ -58,14 +46,5 @@
 		</div>
 	</div>
 </div>
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				Footer
-			</div>
-		</div>
-	</div>
-</footer>
 
 <?php $this->load->view('footer') ?>

@@ -1,13 +1,18 @@
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<b>not some cats</b> &middot; A collection of tools and reads for website developers and designers
+				</div>
+				<div class="col-lg-6 text-right">
+					<a href="<?php echo base_url('contact') ?>">Submit Tool</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<script src="<?php echo base_url('js/vendor/modernizr-3.6.0.min.js') ?>"></script>
     <script src="<?php echo base_url('js/vendor/jquery-3.3.1.min.js') ?>"></script>
     <script src="<?php echo base_url('js/main.js') ?>"></script>
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>
