@@ -21,7 +21,7 @@
     <meta name="msapplication-TileColor" content="#222222">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="<?php echo base_url('js/vendor/modernizr-2.7.1.min.js') ?>"></script>
     <link href="<?php echo base_url('css/normalize.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('css/main.css') ?>" rel="stylesheet">

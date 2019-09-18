@@ -1,3 +1,7 @@
 body {
 	line-height: 1.5rem;
 }
+
+.container {
+	max-width: 900px;
+}
