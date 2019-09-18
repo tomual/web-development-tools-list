@@ -24,3 +24,9 @@ function get_title() {
     $ci =& get_instance();
     return $ci->title ?? null;
 }
+
+function dd($message) {
+    echo "<pre>";
+    print_r($message);
+    echo "</pre>";
+}

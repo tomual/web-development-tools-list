@@ -7,12 +7,19 @@ class Post extends MY_Controller
 	{
 		parent::__construct();
 		$this->load->model('post_model');
+		$this->load->model('save_model');
 		$this->load->library('form_validation');
 	}
 
 	public function index()
 	{
 		$this->load->view('home');
+	}
+
+	public function all()
+	{
+		$posts = $this->post_model->get_all();
+		dd($posts);
 	}
 
 	public function create()
@@ -40,4 +47,15 @@ class Post extends MY_Controller
 		set_title('Create');
 		$this->load->view('post/form');
 	}
+
+	public function save($post_id)
+	{
+		$saved_by = $this->session->userdata('id');
+		if ($saved_by) {
+			return $this->save_model->save($post_id, $saved_by);
+		}
+		return false;
+	}
+
+	
 }

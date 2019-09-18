@@ -18,6 +18,13 @@ class Post_model extends CI_Model
 		return $this->db->insert_id();
 	}
 
+	function get_all()
+	{
+		$this->db->from('posts');
+		$result = $this->db->get();
+		return $result->result();
+	}
+
 	function get($id)
 	{
 		$this->db->where('id', $id);
