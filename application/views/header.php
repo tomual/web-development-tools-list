@@ -1,68 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
     <meta charset="utf-8">
-    <title><?php echo get_title() ? get_title() . ' | ' : '' ?>Toolip</title>
-    <meta name="description" content="">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>toolip - Directory of website development tools</title>
+    <meta name="description" content="toolip is a collection of tools, articles and references useful for website developers and designers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
-    <link rel="shortcut icon" sizes="196x196" href="img/touch/touch-icon-196x196.png">
-    <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo base_url() ?>/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url() ?>/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url() ?>/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url() ?>/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="<?php echo base_url() ?>/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo base_url() ?>/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo base_url() ?>/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo base_url() ?>/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>/favicon-128.png" sizes="128x128" />
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#222222">
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="<?php echo base_url('js/vendor/modernizr-2.7.1.min.js') ?>"></script>
-    <link href="<?php echo base_url('css/normalize.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('css/main.css') ?>" rel="stylesheet">
-    <link href="<?php echo base_url('css/style.css') ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('css/min.css') ?>">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500|Jua" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NT799TP');</script>
+    <!-- End Google Tag Manager -->
 </head>
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Title</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('page') ?>">Page</a>
-                </li>
-            </ul>
-            <div class="my-2 my-lg-0">
-                <ul class="navbar-nav mr-auto">
-                    <?php if ($this->user): ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('settings/edit') ?>"><?php echo $this->user->username ?></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('user/logout') ?>">Log Out</a>
-                        </li>
-                    <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('user/login') ?>">Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('user/signup') ?>">Sign Up</a>
-                        </li>
-                    <?php endif ?>
-                </ul>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT799TP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col" style="background-image: url('<?php echo base_url('img/logo.jpg') ?>')">
+                    <a href="<?php echo base_url() ?>"><h1>toolip</h1></a>
+                    <a href="<?php echo base_url() ?>"><div class="subtitle">Website Development Tools</div></a>
+                </div>
             </div>
         </div>
-    </nav>
-    <main role="main" class="container">
-        <div class="row">
+    </header>

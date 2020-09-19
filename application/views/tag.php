@@ -25,7 +25,7 @@
 		</div>
 		<?php foreach ($tools as $tool) : ?>
 			<div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-6">
-				<a href="<?php echo $tool->url ?>">
+				<a href="<?php echo $tool->url ?>" target="_blank">
 					<div class="card">
 						<div class="card-img-top" style="background-image:url('<?php echo base_url("img/" . url_title($tool->name, '-', TRUE) . ".jpg") ?>')" alt="Card image cap"></div>
 						<div class="card-body">
